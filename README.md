@@ -61,8 +61,8 @@ The practical takeaway: K-means gives you six broad segments to build a marketin
 
 Elbow and silhouette were checked against each other before finalising k=6 — see the README section above and `src/03_cluster_analysis.R` for the full reasoning.
 
-![Elbow method](outputs/figures/elbow_plot.png)
-![Silhouette method](outputs/figures/silhouette_plot.png)
+![Elbow method](final_elbow_plot.png)
+![Silhouette method](final_silhouette_plot.png)
 
 ## Repo structure
 
