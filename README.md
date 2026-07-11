@@ -49,11 +49,11 @@ DBSCAN was run as a second, complementary pass — not to replace K-means, but b
 | **Financially distressed** | **4.1%** | **Extreme debt-to-income ratio (11.57), highest missed-payment rate — the clear high-risk group** |
 
 ![K-means cluster sizes](cluster_sizes.png)
-![K-means clusters, PCA projection](final_kmeans_pca.png)
+![K-means clusters, PCA projection](kmeans_pca.png)
 
 **DBSCAN:** flagged 3.3% of customers (3,303) as density-based outliers. That group had a debt-to-income ratio 32x higher, 8x more outstanding debt, and 20x more missed payments than everyone else — a sharper concentration of risk than even K-means' own worst cluster, because DBSCAN isolates points that are sparse across the *whole* 9-dimensional space rather than merely far from one centroid.
 
-![DBSCAN clusters, PCA projection, grey points are noise](final_dbscan_pca.png)
+![DBSCAN clusters, PCA projection, grey points are noise](dbscan_pca.png)
 
 The practical takeaway: K-means gives you six broad segments to build a marketing/relationship strategy around; DBSCAN gives you a much smaller, sharper list of individual customers who need manual underwriting attention right now. They answer different questions, and the project uses both rather than picking one.
 
@@ -61,7 +61,7 @@ The practical takeaway: K-means gives you six broad segments to build a marketin
 
 Elbow and silhouette were checked against each other before finalising k=6 — see the README section above and `src/03_cluster_analysis.R` for the full reasoning.
 
-![Elbow method](final_elbow_plot.png)
+![Elbow method](elbow_plot.png)
 ![Silhouette method](silhouette_plot.png)
 
 ## Repo structure
